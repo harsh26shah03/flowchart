@@ -11,6 +11,7 @@ import ReactFlow, {
   useReactFlow,
   ReactFlowProvider,
   ConnectionLineType,
+  SelectionMode,
 } from "reactflow";
 
 import "reactflow/dist/base.css";
@@ -232,6 +233,8 @@ const Flow = () => {
       fitView={{ duration: 800, maxZoom: 1 }}
       className="bg-teal-50 absolute"
       connectionLineType={ConnectionLineType.SmoothStep}
+      selectionOnDrag
+      selectionMode={SelectionMode.Partial}
     >
       <Controls />
       <Button
@@ -324,6 +327,7 @@ const addStageNode = (stageId) => {
         strokeWidth: 1,
         stroke: "#60a5fa",
       },
+      deletable: false,
     },
 
     {
@@ -339,6 +343,7 @@ const addStageNode = (stageId) => {
         strokeWidth: 1,
         stroke: "#60a5fa",
       },
+      deletable: false,
     },
 
     {
@@ -354,6 +359,7 @@ const addStageNode = (stageId) => {
         strokeWidth: 1,
         stroke: "#60a5fa",
       },
+      deletable: false,
     },
   ];
 
